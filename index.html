@@ -1,168 +1,621 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Serhat Ture</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="shortcut icon" type="image/png" href="images/ss.png">
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Serhat Ture | Senior Software Engineer &amp; Backend Specialist</title>
+  <meta name="description" content="Personal portfolio of Serhat Ture, a senior software engineer specializing in Java, Spring Boot, PostgreSQL, and GraphQL. M.Sc. graduate from Wilmington University." />
+  <meta name="author" content="Serhat Ture" />
+  <meta name="keywords" content="Serhat Ture, Software Developer, Java, Spring Boot, PostgreSQL, GraphQL, Ankara, Backend Engineer" />
 
-		<!-- Header -->
-			<header id="header">
-				<figure class="inner">
-					<a href="#about" class="image avatar">
-						<img src="images/thumbs/profile-pic (3).png" alt="Bitmoji image of author" />
-					</a>
-					<figcaption> Software Developer |  Author </figcaption>
-				</figure>
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Serhat Ture | Senior Software Engineer" />
+  <meta property="og:description" content="Crafting robust, high-throughput software architectures with Java, Spring Boot, and PostgreSQL." />
+  <meta property="og:image" content="images/thumbs/profile-pic (3).png" />
 
-				<!-- Navigation menu -->
-				<nav class="navbar">
-					<a href="#about"><i class="icon solid fa-user"></i> About</a><br>
-					<a href="#project"><i class="icon solid fa-suitcase"></i> Projects</a><br>
-					<a href="#skills"><i class="icon solid fa-laptop-code"></i> Skills</a><br>
-					<a href="#articles"><i class="icon solid fa-file-alt"></i> Articles</a><br>
-					<a href="#contact"><i class="icon solid fa-envelope"></i> Contact</a>
-				</nav>
-			</header>
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="images/ss.png" />
 
-		<!-- Main -->
-			<main id="main">
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  
+  <!-- Modern Stylesheet -->
+  <link rel="stylesheet" href="assets/css/modern.css" />
+</head>
+<body>
 
-				<!-- About -->
-					<section id="about">
-						<header class="major">
-							<h1>Hello!, I'm Serhat Ture</h1>
-						</header>
-					
-						   <h3> I am a software developer based in Ankara,Turkey. With expertise in Java, Spring Boot, PostgreSQL, and GraphQL,
-							   among other technologies, I craft robust and efficient software solutions. </h3> </br> <h3>I proudly hold a Master of Science degree from Wilmington University. Beyond my formal education, 
-								 I believe in giving back to the developer community. 
-								 You're welcome to explore my coding projects and insightful articles on <a href="https://github.com/serhat-ture"> Github</a>  and <a href="https://medium.com/@serhatture"> Medium</a>.
-							</h3> 
+  <!-- Floating Glass Header & Navbar -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Serhat Ture Home">
+        <span class="brand-badge">ST</span>
+        <span class="brand-name">Serhat <span>Ture</span></span>
+      </a>
 
-							
-						
-						</h3>
-						<ul class="actions">
-							<li><a href="#contact" class="button">Learn More</a></li>
-						</ul>
-					</section>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#articles" class="nav-link">Articles</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-				
+      <div class="nav-actions">
+        <!-- Dark / Light Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
 
-				<!-- Project -->
-					<section id="project">
-						<h1>Projects</h1>
-						<div class="row">
-							<!-- Project one -->
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/serhat-ture/cellPhone-Rest-API" class="image fit thumb" target="_blank">
-									<img src="images/ceell.png" alt="Mac book and credit card; Credit: @pickawood on Unsplash" />
-								</a>
-									<h3 style="text-align:center;"><strong>cellPhone Rest-API</strong></h3>
-								<p style="text-align:center;">CRUD &#9679; Spring Boot  &#9679; JPA &#9679; PostgreSQL</p>
-							</article>
-							<!-- Project two -->
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/serhat-ture/javaHack" class="image fit thumb" target="_blank">
-									<img src="images/blogg.png" alt="Twitter log; Credit: @alexbemore on Unsplash" /></a>
-								<h3 style="text-align:center;"><strong>javaHack Blog Application</strong></h3>
-								<p style="text-align:center;">Spring Boot  &#9679; HIBERNATE &#9679; LOMBOK &#9679; PostgreSQL </p>
-							</article>
-							<!-- Project three -->
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/serhat-ture/productCrm" class="image fit thumb" target="_blank">
-									<img src="images/ccrm.png" alt="Clipboard and laptop with tutorial writter; Credit: @markuswinkler on Unsplash"/>
-								</a>
-								<h3 style="text-align:center;"><strong>product CRM Application</strong></h3>
-								<p style="text-align:center;">Spring Boot &#9679; HIBERNATE &#9679; PostgreSQL </p>
-							</article>
-							
-						
-										
-						
-						</div>
-						<ul class="actions">
-							<li><a href="https://github.com/serhat-ture" class="button" target="_blank">Full Portfolio</a></li>
-						</ul>
-					</section>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.55rem 1.2rem; font-size: 0.875rem;">
+          Let's Talk
+        </a>
 
-					<!-- Skills -->
-					<section id="skills">
-						<header class="row">
-							<h1>Skills</h1>
-						</header>
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-						<ul >
-							<li>Programming Language:   <span style="color:#49bf9d">JAVA, Javascript</span> </li>
-							<li>Databases:   <span style="color:#49bf9d">PostgreSQL, MySQL</span> </li>
-							<li >Version Control:   <span style="color:#49bf9d">Git</span></li>
-							<li>Frameworks:  <span style="color:#49bf9d">Spring Boot, Spring Data JPA, JDBC, Hibernate, Spring MVC, GraphQL</span> 	</li>
-							<li> Web Technologies:   <span style="color:#49bf9d">JSF, HTML5, CSS </span> </li>
-							<li> IDE:   <span style="color:#49bf9d">IntelliJ, Eclipse, VSCode </span></li>
-							<li> OS:  <span style="color:#49bf9d">Linux, Windows, macOS</span> 	 </li>
-						  </ul> 
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Copy & CTAs -->
+          <div class="hero-content">
+            <div class="hero-badge-status">
+              <span class="status-dot"></span>
+              Available for New Opportunities
+            </div>
 
+            <h1 class="hero-title">
+              Hello, I'm <br />
+              <span class="text-gradient">Serhat Ture</span>
+            </h1>
 
-						
-					
-					</section>
+            <div class="hero-subtitle">
+              <i class="fa-solid fa-code" style="color: var(--accent-cyan);"></i>
+              Senior Software Engineer &amp; Backend Specialist
+            </div>
 
-						<!-- Articles -->
-						<section id="articles">
-							<header class="row">
-								<h1>Here’re some articles I wrote recently.</h1>
-							</header>
-							<h2><a href="https://medium.com/@serhatture/arrays-in-the-parking-lot-c7cbe685f761"> ARRAYS in the parking lot !!!</a>   </h2>
-							<p>
-								Arrays are a powerful and useful concept used in programming.		
-							</p>
-							<h2><a href="https://medium.com/@serhatture/encapsulation-java-6eca7cb69fbd"> Encapsulation</a>   </h2>
-							<p>
-								Learning Encapsulation in detail with examples.								</p>
-							<h2> <a href="https://medium.com/@serhatture/exception-handling-in-java-57b8bcd78ae6">Exception Handling in Java </a>  </h2>
-							<p>
-								Exception handling is not supposed to replace a simple test and it is important to make good use of the exception hierarchy.			  </p>
-						</section>
+            <p class="hero-description">
+              Based in Ankara, Turkey. I engineer resilient, high-throughput distributed systems 
+              and enterprise backend architectures leveraging <strong>Java</strong>, <strong>Spring Boot</strong>, 
+              <strong>PostgreSQL</strong>, and <strong>GraphQL</strong>. Proud M.Sc. alumnus from Wilmington University.
+            </p>
 
-				<!-- Contact -->
-					<section id="contact">
-									<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSesJWkfWXj7itKxZpwaXFnTT5mu8LYVqogFeLm3tSXOGeb-dA/viewform?embedded=true" width="740" height="1044" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fa-solid fa-layer-group"></i> Explore Projects
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fa-regular fa-paper-plane"></i> Get in Touch
+              </a>
+            </div>
 
-					</section>
-			</main>
+            <div class="hero-socials">
+              <a href="https://github.com/serhat-ture" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/serhat-ture/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://medium.com/@serhatture" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Medium Articles" title="Medium">
+                <i class="fa-brands fa-medium"></i>
+              </a>
+              <button id="copy-email-btn" class="social-icon-btn" data-email="serhatture@gmail.com" aria-label="Copy Email Address" title="Copy Email">
+                <i class="fa-solid fa-envelope"></i>
+              </button>
+            </div>
+          </div>
 
+          <!-- Right Column: Interactive Profile Visual -->
+          <div class="hero-visual">
+            <div class="avatar-wrapper">
+              <div class="avatar-aura"></div>
+              <div class="avatar-frame">
+                <img src="images/thumbs/profile-pic (3).png" alt="Serhat Ture - Software Developer" />
+              </div>
 
+              <!-- Floating Micro Badges -->
+              <div class="floating-badge badge-top-left">
+                <i class="fa-brands fa-java" style="color: #f89820; font-size: 1.1rem;"></i>
+                <span>Java &amp; Spring Boot</span>
+              </div>
+              <div class="floating-badge badge-bottom-right">
+                <i class="fa-solid fa-database" style="color: #38bdf8; font-size: 1rem;"></i>
+                <span>PostgreSQL &amp; GraphQL</span>
+              </div>
+            </div>
+          </div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/serhat-ture/" class="icon brands fa-linkedin" target="_blank"><span class="label" >LinkedIn</span></a></li>
-						<li><a href="https://github.com/serhat-ture" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
-						<li><a href="https://medium.com/@serhatture" class="icon brands fa-medium" target="_blank"><span class="label" >Medium</span></a></li>
-					</ul>
-					<!-- <ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul> -->
-				</div>
-			</footer>
+        </div>
+      </div>
+    </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Key Metrics Strip -->
+    <div class="stats-strip">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value">Java &amp; Spring</span>
+            <span class="stat-label">Core Tech Focus</span>
+            <span class="stat-desc">Enterprise-grade architecture &amp; REST APIs</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">M.Sc.</span>
+            <span class="stat-label">Master of Science</span>
+            <span class="stat-desc">Wilmington University Graduate</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">Medium</span>
+            <span class="stat-label">Technical Author</span>
+            <span class="stat-desc">In-depth Java &amp; CS concepts</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">Open Source</span>
+            <span class="stat-label">Community Driven</span>
+            <span class="stat-desc">Sharing code &amp; continuous learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	</body>
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Passion for Clean Code &amp; Scalable Systems</h2>
+          <p class="section-desc">
+            Bridging strong academic computer science foundations with hands-on production engineering.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              I am a software developer based in <strong>Ankara, Turkey</strong>. My core passion lies in architecting 
+              resilient, performant, and maintainable backend systems. With a strong command of 
+              <strong>Java</strong>, <strong>Spring Boot</strong>, <strong>PostgreSQL</strong>, and modern API standards like 
+              <strong>GraphQL</strong> and <strong>REST</strong>, I build solutions that gracefully handle business complexity.
+            </p>
+            <p>
+              I hold a <strong>Master of Science degree from Wilmington University</strong>. Academic rigor taught me to look beyond 
+              superficial frameworks and appreciate the underlying data structures, distributed paradigms, and database optimizations.
+            </p>
+            <p>
+              I firmly believe in giving back to the engineering ecosystem. Whenever I discover an elegant solution or unpack a tricky 
+              concept, I publish detailed writeups on <a href="https://medium.com/@serhatture" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">Medium</a> 
+              and contribute publicly on <a href="https://github.com/serhat-ture" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">GitHub</a>.
+            </p>
+          </div>
+
+          <div class="about-cards">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="info-content">
+                <h4>Master of Science</h4>
+                <p>Wilmington University &mdash; Advanced Computer Science and Information Systems.</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <div class="info-content">
+                <h4>Backend Architecture</h4>
+                <p>Relational modeling, Hibernate/JPA caching, Spring Security, and high-throughput query design.</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info-content">
+                <h4>Location &amp; Collaboration</h4>
+                <p>Ankara, Turkey. Open to global remote, hybrid, and technical consulting opportunities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section" id="skills" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Technical Expertise &amp; Toolset</h2>
+          <p class="section-desc">
+            Technologies and frameworks I utilize to craft scalable, enterprise-grade software.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <i class="fa-solid fa-code skill-category-icon"></i>
+              <h3 class="skill-category-title">Languages</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill featured"><i class="fa-brands fa-java"></i> Java (SE/EE)</span>
+              <span class="skill-pill featured"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
+              <span class="skill-pill"><i class="fa-solid fa-terminal"></i> Bash / Shell</span>
+            </div>
+          </div>
+
+          <!-- Frameworks & Ecosystem -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <i class="fa-solid fa-cubes skill-category-icon"></i>
+              <h3 class="skill-category-title">Frameworks &amp; APIs</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill featured"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+              <span class="skill-pill featured"><i class="fa-solid fa-diagram-project"></i> Spring Data JPA</span>
+              <span class="skill-pill"><i class="fa-solid fa-bolt"></i> GraphQL</span>
+              <span class="skill-pill"><i class="fa-solid fa-link"></i> RESTful APIs</span>
+              <span class="skill-pill"><i class="fa-solid fa-database"></i> Hibernate &amp; JDBC</span>
+              <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Spring MVC</span>
+            </div>
+          </div>
+
+          <!-- Databases & Persistence -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <i class="fa-solid fa-hard-drive skill-category-icon"></i>
+              <h3 class="skill-category-title">Databases &amp; Storage</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill featured"><i class="fa-solid fa-database"></i> PostgreSQL</span>
+              <span class="skill-pill"><i class="fa-solid fa-server"></i> MySQL</span>
+              <span class="skill-pill"><i class="fa-solid fa-table"></i> Schema Design</span>
+              <span class="skill-pill"><i class="fa-solid fa-gauge-high"></i> Query Optimization</span>
+            </div>
+          </div>
+
+          <!-- Web & Frontend Technologies -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <i class="fa-solid fa-laptop-code skill-category-icon"></i>
+              <h3 class="skill-category-title">Web Technologies</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> Modern CSS3</span>
+              <span class="skill-pill"><i class="fa-solid fa-cubes-stacked"></i> JSF</span>
+              <span class="skill-pill"><i class="fa-solid fa-mobile-screen"></i> Responsive UX/UI</span>
+            </div>
+          </div>
+
+          <!-- Development Tools -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <i class="fa-solid fa-screwdriver-wrench skill-category-icon"></i>
+              <h3 class="skill-category-title">Tools &amp; IDEs</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill featured"><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+              <span class="skill-pill"><i class="fa-solid fa-code"></i> IntelliJ IDEA</span>
+              <span class="skill-pill"><i class="fa-solid fa-laptop"></i> VS Code</span>
+              <span class="skill-pill"><i class="fa-solid fa-cube"></i> Eclipse</span>
+            </div>
+          </div>
+
+          <!-- Operating Systems -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <i class="fa-solid fa-desktop skill-category-icon"></i>
+              <h3 class="skill-category-title">Environments &amp; OS</h3>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill"><i class="fa-brands fa-linux"></i> Linux</span>
+              <span class="skill-pill"><i class="fa-brands fa-apple"></i> macOS</span>
+              <span class="skill-pill"><i class="fa-brands fa-windows"></i> Windows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Selected Works</span>
+          <h2 class="section-title">Featured Software Projects</h2>
+          <p class="section-desc">
+            Production-ready backend services, robust REST APIs, and developer-centric applications.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: cellPhone Rest-API -->
+          <article class="project-card">
+            <div class="project-thumbnail-wrapper">
+              <img src="images/ceell.png" alt="cellPhone Rest-API illustration" class="project-thumbnail" />
+              <div class="project-overlay">
+                <span class="project-tag"><i class="fa-solid fa-server"></i> REST API</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tag-list">
+                <span class="project-tag">Spring Boot</span>
+                <span class="project-tag">Spring Data JPA</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">CRUD</span>
+              </div>
+              <h3 class="project-title">cellPhone Rest-API</h3>
+              <p class="project-desc">
+                High-performance enterprise RESTful API for inventory and product management. 
+                Features clean controller-service-repository layered design, robust payload validation, 
+                and transactional persistence in PostgreSQL.
+              </p>
+              <div class="project-footer">
+                <a href="https://github.com/serhat-ture/cellPhone-Rest-API" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <i class="fa-brands fa-github"></i> View Repository <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: javaHack Blog Application -->
+          <article class="project-card">
+            <div class="project-thumbnail-wrapper">
+              <img src="images/blogg.png" alt="javaHack Blog Application illustration" class="project-thumbnail" />
+              <div class="project-overlay">
+                <span class="project-tag"><i class="fa-solid fa-newspaper"></i> Web Platform</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tag-list">
+                <span class="project-tag">Spring Boot</span>
+                <span class="project-tag">Hibernate</span>
+                <span class="project-tag">Lombok</span>
+                <span class="project-tag">PostgreSQL</span>
+              </div>
+              <h3 class="project-title">javaHack Blog Application</h3>
+              <p class="project-desc">
+                Full-featured content and blogging engine engineered for tech writers and developers. 
+                Utilizes Hibernate ORM, boilerplate reduction via Lombok, and relational article-tag mappings.
+              </p>
+              <div class="project-footer">
+                <a href="https://github.com/serhat-ture/javaHack" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <i class="fa-brands fa-github"></i> View Repository <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: product CRM Application -->
+          <article class="project-card">
+            <div class="project-thumbnail-wrapper">
+              <img src="images/ccrm.png" alt="product CRM Application illustration" class="project-thumbnail" />
+              <div class="project-overlay">
+                <span class="project-tag"><i class="fa-solid fa-chart-line"></i> Enterprise CRM</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tag-list">
+                <span class="project-tag">Spring Boot</span>
+                <span class="project-tag">Hibernate</span>
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">CRM</span>
+              </div>
+              <h3 class="project-title">product CRM Application</h3>
+              <p class="project-desc">
+                Enterprise Product Customer Relationship Management application that organizes customer records, 
+                sales data pipelines, and relational product tracking with secure transactional handling.
+              </p>
+              <div class="project-footer">
+                <a href="https://github.com/serhat-ture/productCrm" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <i class="fa-brands fa-github"></i> View Repository <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-cta-box">
+          <a href="https://github.com/serhat-ture" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <i class="fa-brands fa-github"></i> Explore Full Portfolio on GitHub <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="section" id="articles" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Knowledge Sharing</span>
+          <h2 class="section-title">Published Technical Articles</h2>
+          <p class="section-desc">
+            Insights on foundational computer science concepts, object-oriented design, and Java best practices.
+          </p>
+        </div>
+
+        <div class="articles-grid">
+          <!-- Article 1 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-badge">Data Structures</span>
+              <span><i class="fa-brands fa-medium"></i> Medium</span>
+            </div>
+            <h3 class="article-title">ARRAYS in the parking lot !!!</h3>
+            <p class="article-summary">
+              An intuitive real-world analogy demystifying contiguous memory allocation, zero-based indexing, 
+              and how arrays optimize fast retrieval times in high-performance applications.
+            </p>
+            <a href="https://medium.com/@serhatture/arrays-in-the-parking-lot-c7cbe685f761" target="_blank" rel="noopener noreferrer" class="article-action">
+              Read Article on Medium <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-badge">OOP Principles</span>
+              <span><i class="fa-brands fa-medium"></i> Medium</span>
+            </div>
+            <h3 class="article-title">Encapsulation in Java</h3>
+            <p class="article-summary">
+              A comprehensive breakdown of encapsulation, accessor/mutator safety, object state protection, 
+              and why keeping fields private is fundamental to enterprise modularity.
+            </p>
+            <a href="https://medium.com/@serhatture/encapsulation-java-6eca7cb69fbd" target="_blank" rel="noopener noreferrer" class="article-action">
+              Read Article on Medium <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-badge">Reliability</span>
+              <span><i class="fa-brands fa-medium"></i> Medium</span>
+            </div>
+            <h3 class="article-title">Exception Handling in Java</h3>
+            <p class="article-summary">
+              Why exception handling should never substitute ordinary condition checks, navigating the `Throwable` 
+              hierarchy, and designing graceful error recovery in production backends.
+            </p>
+            <a href="https://medium.com/@serhatture/exception-handling-in-java-57b8bcd78ae6" target="_blank" rel="noopener noreferrer" class="article-action">
+              Read Article on Medium <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Interactive Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card-wrapper">
+          <div class="contact-grid">
+            
+            <!-- Left Info Column -->
+            <div class="contact-info-col">
+              <div class="contact-info-header">
+                <span class="section-tag">Let's Connect</span>
+                <h3>Have a Project in Mind?</h3>
+                <p>
+                  Whether you have an inquiry about distributed backend architecture, want to discuss Java &amp; Spring Boot solutions, 
+                  or just want to say hi, feel free to reach out!
+                </p>
+              </div>
+
+              <div class="contact-methods">
+                <div class="contact-method-item">
+                  <div class="contact-method-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="contact-method-details">
+                    <h5>Direct Email</h5>
+                    <a href="mailto:serhatture@gmail.com">serhatture@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact-method-item">
+                  <div class="contact-method-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="contact-method-details">
+                    <h5>Location</h5>
+                    <p>Ankara, Turkey (UTC+3)</p>
+                  </div>
+                </div>
+
+                <div class="contact-method-item">
+                  <div class="contact-method-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </div>
+                  <div class="contact-method-details">
+                    <h5>LinkedIn</h5>
+                    <a href="https://www.linkedin.com/in/serhat-ture/" target="_blank" rel="noopener noreferrer">linkedin.com/in/serhat-ture</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-socials">
+                <a href="https://github.com/serhat-ture" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/serhat-ture/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://medium.com/@serhatture" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Medium" title="Medium">
+                  <i class="fa-brands fa-medium"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Interactive Form Column -->
+            <div class="contact-form-col">
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name</label>
+                  <input type="text" id="form-name" class="form-input" placeholder="John Doe" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email Address</label>
+                  <input type="email" id="form-email" class="form-input" placeholder="john@example.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="form-subject" class="form-label">Subject</label>
+                  <input type="text" id="form-subject" class="form-input" placeholder="Project collaboration / Inquiry" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message" class="form-label">Message</label>
+                  <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project or inquiry..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit-btn">
+                  <i class="fa-regular fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modern Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        &copy; <span id="current-year">2026</span> <strong>Serhat Ture</strong>. All rights reserved.
+      </div>
+      <div class="footer-built-with">
+        Crafted with modern HTML5, Vanilla CSS &amp; Clean Architecture
+      </div>
+      <a href="#hero" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="assets/js/app.js"></script>
+</body>
 </html>
