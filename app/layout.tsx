@@ -15,9 +15,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://serhat-ture.github.io/st/"),
   title: "NormTürk — Kurumlar İçin Yeni Nesil Dijital Standartlar",
   description:
     "Belediyeler, resmi kurumlar, eğitim kurumları ve spor kulüpleri için güvenli, KVKK uyumlu, yüksek performanslı kurumsal web mimarileri.",
+  alternates: {
+    canonical: "./",
+  },
+  openGraph: {
+    title: "NormTürk — Kurumlar İçin Yeni Nesil Dijital Standartlar",
+    description:
+      "Belediyeler, resmi kurumlar, eğitim kurumları ve spor kulüpleri için güvenli, KVKK uyumlu, yüksek performanslı kurumsal web mimarileri.",
+    url: "https://serhat-ture.github.io/st/",
+    siteName: "NormTürk",
+    locale: "tr_TR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
