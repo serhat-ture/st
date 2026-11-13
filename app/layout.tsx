@@ -30,6 +30,21 @@ export const metadata: Metadata = {
     siteName: "NormTürk",
     locale: "tr_TR",
     type: "website",
+    images: [
+      {
+        url: "https://serhat-ture.github.io/st/og-normturk.png",
+        width: 1200,
+        height: 630,
+        alt: "NormTürk — Kurumlar İçin Yeni Nesil Dijital Standartlar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NormTürk — Kurumlar İçin Yeni Nesil Dijital Standartlar",
+    description:
+      "Belediyeler, resmi kurumlar, eğitim kurumları ve spor kulüpleri için güvenli, KVKK uyumlu, yüksek performanslı kurumsal web mimarileri.",
+    images: ["https://serhat-ture.github.io/st/og-normturk.png"],
   },
 };
 

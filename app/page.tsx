@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import {
+  AnimatePresence,
   MotionConfig,
   motion,
   useMotionValue,
@@ -19,8 +20,10 @@ import {
   Lock,
   Mail,
   MapPin,
+  Menu,
   Server,
   ShieldCheck,
+  X,
   Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -60,23 +63,33 @@ interface CaseStudy {
 const EASE_OUT_EXPO: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 const heroContainerVariants: Variants = {
-  hidden: { opacity: 0 },
+  hidden: {},
   visible: {
-    opacity: 1,
     transition: {
-      staggerChildren: 0.09,
-      delayChildren: 0.05,
+      staggerChildren: 0.08,
+      delayChildren: 0.04,
+    },
+  },
+};
+
+const heroHeadlineVariants: Variants = {
+  hidden: { y: 16 },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: EASE_OUT_EXPO,
     },
   },
 };
 
 const heroItemVariants: Variants = {
-  hidden: { opacity: 0, y: 26 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.85,
+      duration: 0.8,
       ease: EASE_OUT_EXPO,
     },
   },
@@ -377,7 +390,10 @@ function CaseStudyVisual({ variant }: { variant: CaseStudy["previewVariant"] }) 
 
 export default function NormTurkLandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const topSentinelRef = useRef<HTMLDivElement | null>(null);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement | null>(null);
+  const mobileDrawerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const sentinel = topSentinelRef.current;
@@ -394,9 +410,48 @@ export default function NormTurkLandingPage() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    mobileDrawerRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+        mobileMenuButtonRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isMobileMenuOpen]);
+
+  const handleScrollTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setIsMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (window.location.hash) {
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
+    }
+  };
+
+  const closeMobileMenu = (restoreFocus = false) => {
+    setIsMobileMenuOpen(false);
+    if (restoreFocus) {
+      mobileMenuButtonRef.current?.focus();
+    }
+  };
+
   return (
     <MotionConfig reducedMotion="user">
-      <div className="relative min-h-screen bg-white text-slate-900 selection:bg-slate-900 selection:text-white">
+      <div
+        id="top"
+        className="relative min-h-screen bg-white text-slate-900 selection:bg-slate-900 selection:text-white"
+      >
         {/* Top sentinel for zero-overhead sticky header detection */}
         <div
           ref={topSentinelRef}
@@ -410,14 +465,15 @@ export default function NormTurkLandingPage() {
         <header
           className={cn(
             "sticky top-0 z-50 w-full transition-colors duration-300",
-            isScrolled
-              ? "border-b border-slate-200/60 bg-white/75 backdrop-blur-md shadow-[0_1px_24px_-12px_rgba(15,23,42,0.12)]"
+            isScrolled || isMobileMenuOpen
+              ? "border-b border-slate-200/60 bg-white/80 backdrop-blur-md shadow-[0_1px_24px_-12px_rgba(15,23,42,0.12)]"
               : "border-b border-transparent bg-transparent"
           )}
         >
           <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:h-20 md:px-10">
             <a
-              href="#"
+              href="#top"
+              onClick={handleScrollTop}
               className="group inline-flex items-baseline gap-0.5 rounded-sm text-xl font-semibold tracking-tighter text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-4"
             >
               <span>Norm</span>
@@ -447,28 +503,111 @@ export default function NormTurkLandingPage() {
               ))}
             </nav>
 
-            <MagneticWrapper>
-              <Button
-                asChild
-                size="sm"
-                className="relative h-10 rounded-xl border border-slate-800/80 bg-slate-900 px-5 text-sm font-medium text-white shadow-[0_0_24px_-6px_rgba(30,58,138,0.45)] transition-all duration-300 hover:bg-slate-800 hover:shadow-[0_0_32px_-4px_rgba(30,58,138,0.65)]"
-              >
-                <a
-                  href="mailto:info@normturk.dev"
-                  className="inline-flex items-center gap-2"
+            <div className="flex items-center gap-2.5">
+              <MagneticWrapper className="hidden sm:inline-block">
+                <Button
+                  asChild
+                  size="sm"
+                  className="relative h-10 rounded-xl border border-slate-800/80 bg-slate-900 px-5 text-sm font-medium text-white shadow-[0_0_24px_-6px_rgba(30,58,138,0.45)] transition-all duration-300 hover:bg-slate-800 hover:shadow-[0_0_32px_-4px_rgba(30,58,138,0.65)]"
                 >
-                  <span>İletişime Geç</span>
-                  <ArrowUpRight
-                    className="h-3.5 w-3.5 opacity-80"
-                    aria-hidden={true}
-                  />
-                </a>
-              </Button>
-            </MagneticWrapper>
+                  <a
+                    href="mailto:info@normturk.dev"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <span>İletişime Geç</span>
+                    <ArrowUpRight
+                      className="h-3.5 w-3.5 opacity-80"
+                      aria-hidden={true}
+                    />
+                  </a>
+                </Button>
+              </MagneticWrapper>
+
+              <button
+                ref={mobileMenuButtonRef}
+                type="button"
+                aria-label={isMobileMenuOpen ? "Menüyü Kapat" : "Menüyü Aç"}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-nav-drawer"
+                onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white/90 text-slate-800 transition-colors hover:border-slate-300 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 md:hidden"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-5 w-5" aria-hidden={true} />
+                ) : (
+                  <Menu className="h-5 w-5" aria-hidden={true} />
+                )}
+              </button>
+            </div>
           </div>
         </header>
 
-        <main>
+        {/* Accessible Mobile Navigation Drawer */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <>
+              <motion.div
+                key="mobile-backdrop"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25, ease: EASE_OUT_EXPO }}
+                onClick={() => closeMobileMenu(true)}
+                aria-hidden="true"
+                className="fixed inset-0 top-16 z-40 bg-slate-950/25 backdrop-blur-xs md:hidden"
+              />
+              <motion.div
+                key="mobile-drawer"
+                id="mobile-nav-drawer"
+                ref={mobileDrawerRef}
+                tabIndex={-1}
+                role="dialog"
+                aria-modal="true"
+                aria-label="Mobil Navigasyon"
+                initial={{ opacity: 0, y: -12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.3, ease: EASE_OUT_EXPO }}
+                className="fixed inset-x-0 top-16 z-50 border-b border-slate-200 bg-white/95 px-6 pb-8 pt-4 shadow-xl backdrop-blur-md focus:outline-none md:hidden"
+              >
+                <nav aria-label="Mobil Menü" className="flex flex-col">
+                  {NAV_ITEMS.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => closeMobileMenu(false)}
+                      className="flex items-center justify-between border-b border-slate-100 py-4 text-base font-medium text-slate-800 transition-colors hover:text-blue-900"
+                    >
+                      <span>{item.label}</span>
+                      <ArrowRight
+                        className="h-4 w-4 text-slate-400"
+                        aria-hidden={true}
+                      />
+                    </a>
+                  ))}
+                </nav>
+                <div className="mt-6">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="h-12 w-full rounded-xl bg-slate-900 text-sm font-medium text-white hover:bg-slate-800"
+                  >
+                    <a
+                      href="mailto:info@normturk.dev"
+                      onClick={() => closeMobileMenu(false)}
+                      className="inline-flex items-center justify-center gap-2"
+                    >
+                      <span>İletişime Geç</span>
+                      <ArrowUpRight className="h-4 w-4" aria-hidden={true} />
+                    </a>
+                  </Button>
+                </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
+
+        <main inert={isMobileMenuOpen || undefined}>
           {/* ============================================================== */}
           {/* 2. HERO SECTION                                                */}
           {/* ============================================================== */}
@@ -500,7 +639,7 @@ export default function NormTurkLandingPage() {
                 </motion.div>
 
                 <motion.h1
-                  variants={heroItemVariants}
+                  variants={heroHeadlineVariants}
                   className="text-5xl font-semibold leading-[1.03] tracking-tighter text-slate-900 sm:text-6xl md:text-8xl"
                 >
                   Kurumlar İçin Yeni Nesil{" "}
@@ -964,6 +1103,7 @@ export default function NormTurkLandingPage() {
         {/* ================================================================ */}
         <footer
           id="iletisim"
+          inert={isMobileMenuOpen || undefined}
           className="scroll-mt-20 border-t border-slate-900 bg-slate-950 text-slate-300"
         >
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-24 md:px-10 md:pt-28">
