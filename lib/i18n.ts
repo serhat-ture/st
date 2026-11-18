@@ -238,7 +238,7 @@ export const DICTIONARY: Record<Locale, SiteDictionary> = {
           id: "belediye-istihdam",
           category: "İstihdam & Kariyer Mimarisi",
           title: "Belediye İstihdam Merkezi",
-          clientType: "Büyükşehir Belediyesi İştiraki",
+          clientType: " Belediye İştiraki",
           summary:
             "İlçe genelindeki iş arayan vatandaşlar ile yerel sanayi kuruluşlarını buluşturan yüksek erişilebilirlikli kariyer vitrini.",
           impact: "100/100 Lighthouse Performans",
@@ -249,21 +249,21 @@ export const DICTIONARY: Record<Locale, SiteDictionary> = {
         {
           id: "kres-akademi-agi",
           category: "Eğitim & Kurumsal Yönetim",
-          title: "Büyükşehir Kreş & Akademi Ağı",
+          title: "Belediye Kreş & Akademi Ağı",
           clientType: "Eğitim Hizmetleri Daire Başkanlığı",
           summary:
-            "42 şubeli belediye kreş ve etüt merkezleri için kontenjan takibi, şube rehberi ve şeffaf ön kayıt bilgilendirme arayüzü.",
+            "Çok şubeli belediye kreş ve etüt merkezleri için kontenjan takibi, şube rehberi ve şeffaf ön kayıt bilgilendirme arayüzü.",
           impact: "0.4s İlk İçerik Boyaması",
           scrimClass: "from-slate-950/90 via-slate-900/50 to-transparent",
           previewVariant: "nursery",
           ariaLabel:
-            "Büyükşehir Kreş ve Akademi Ağı arayüz mimarisi önizlemesi",
+            " Kreş ve Akademi Ağı arayüz mimarisi önizlemesi",
         },
         {
           id: "spor-kompleksi-portali",
           category: "Spor Kulüpleri & Tesisler",
           title: "Ulusal Spor Kompleksi Portalı",
-          clientType: "Belediye Spor Kulübü",
+          clientType: " Spor Kulübü",
           summary:
             "Branş programları, saha doluluk duyuruları ve altyapı seçme takvimlerini tek çatı altında sunan ultra hızlı kurumsal platform.",
           impact: "%68 Daha Hızlı Mobil Deneyim",
@@ -416,7 +416,7 @@ export const DICTIONARY: Record<Locale, SiteDictionary> = {
           id: "belediye-istihdam",
           category: "Employment & Career Architecture",
           title: "Municipal Employment Center",
-          clientType: "Metropolitan Municipality Affiliate",
+          clientType: "Municipal Affiliate",
           summary:
             "A high-accessibility career showcase connecting local job seekers with regional industrial employers across the municipality.",
           impact: "100/100 Lighthouse Performance",
@@ -427,21 +427,21 @@ export const DICTIONARY: Record<Locale, SiteDictionary> = {
         {
           id: "kres-akademi-agi",
           category: "Education & Institutional Management",
-          title: "Metropolitan Daycare & Academy Network",
+          title: "Municipal Daycare & Academy Network",
           clientType: "Department of Educational Services",
           summary:
-            "Quota visibility, branch directory, and transparent pre-registration guidance across 42 municipal daycare and study centers.",
+            "Quota visibility, branch directory, and transparent pre-registration guidance across multi-branch municipal daycare and study centers.",
           impact: "0.4s First Contentful Paint",
           scrimClass: "from-slate-950/90 via-slate-900/50 to-transparent",
           previewVariant: "nursery",
           ariaLabel:
-            "Metropolitan Daycare and Academy Network interface architecture preview",
+            "Daycare and Academy Network interface architecture preview",
         },
         {
           id: "spor-kompleksi-portali",
           category: "Sports Clubs & Facilities",
           title: "National Sports Complex Portal",
-          clientType: "Municipal Sports Club",
+          clientType: "Sports Club",
           summary:
             "An ultra-fast institutional platform unifying branch schedules, court availability notices, and youth tryout calendars.",
           impact: "68% Faster Mobile Experience",
