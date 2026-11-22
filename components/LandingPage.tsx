@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   AnimatePresence,
@@ -206,8 +207,14 @@ function MagneticWrapper({
 }
 
 /* -------------------------------------------------------------------------- */
-/*                     Case Study Architectural Artwork                       */
+/*                       Case Study Editorial Photography                     */
 /* -------------------------------------------------------------------------- */
+
+const CASE_STUDY_IMAGES: Record<CaseStudyCopy["previewVariant"], string> = {
+  employment: "/st/images/case-employment.webp",
+  nursery: "/st/images/case-nursery.webp",
+  sports: "/st/images/case-sports.webp",
+};
 
 function CaseStudyVisual({
   variant,
@@ -216,268 +223,15 @@ function CaseStudyVisual({
   variant: CaseStudyCopy["previewVariant"];
   ariaLabel: string;
 }) {
-  if (variant === "employment") {
-    return (
-      <svg
-        viewBox="0 0 640 420"
-        role="img"
-        aria-label={ariaLabel}
-        className="h-full w-full object-cover"
-      >
-        <defs>
-          <linearGradient id="emp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#F8FAFC" />
-            <stop offset="100%" stopColor="#E2E8F0" />
-          </linearGradient>
-        </defs>
-        <rect width="640" height="420" fill="url(#emp-bg)" />
-        <g opacity="0.45" stroke="#CBD5E1" strokeWidth="1">
-          <line x1="0" y1="84" x2="640" y2="84" />
-          <line x1="0" y1="168" x2="640" y2="168" />
-          <line x1="0" y1="252" x2="640" y2="252" />
-          <line x1="0" y1="336" x2="640" y2="336" />
-          <line x1="160" y1="0" x2="160" y2="420" />
-          <line x1="320" y1="0" x2="320" y2="420" />
-          <line x1="480" y1="0" x2="480" y2="420" />
-        </g>
-        <rect
-          x="56"
-          y="54"
-          width="528"
-          height="312"
-          rx="16"
-          fill="#FFFFFF"
-          stroke="#CBD5E1"
-          strokeWidth="1.5"
-        />
-        <rect x="84" y="84" width="140" height="12" rx="6" fill="#0F172A" />
-        <rect
-          x="468"
-          y="80"
-          width="88"
-          height="22"
-          rx="11"
-          fill="#1E3A8A"
-          opacity="0.12"
-        />
-        <rect x="484" y="88" width="56" height="6" rx="3" fill="#1E3A8A" />
-        <rect
-          x="84"
-          y="130"
-          width="224"
-          height="86"
-          rx="12"
-          fill="#F8FAFC"
-          stroke="#E2E8F0"
-        />
-        <rect x="104" y="152" width="110" height="10" rx="5" fill="#334155" />
-        <rect x="104" y="172" width="160" height="8" rx="4" fill="#94A3B8" />
-        <rect x="104" y="190" width="76" height="8" rx="4" fill="#CBD5E1" />
-        <rect x="332" y="130" width="224" height="86" rx="12" fill="#0F172A" />
-        <rect x="352" y="152" width="96" height="10" rx="5" fill="#F8FAFC" />
-        <rect x="352" y="172" width="164" height="8" rx="4" fill="#94A3B8" />
-        <rect x="352" y="190" width="92" height="8" rx="4" fill="#3B82F6" />
-        <rect
-          x="84"
-          y="236"
-          width="472"
-          height="96"
-          rx="12"
-          fill="#F8FAFC"
-          stroke="#E2E8F0"
-        />
-        <rect x="108" y="264" width="128" height="10" rx="5" fill="#0F172A" />
-        <rect x="108" y="286" width="240" height="8" rx="4" fill="#94A3B8" />
-        <rect x="444" y="268" width="88" height="32" rx="8" fill="#0F172A" />
-      </svg>
-    );
-  }
-
-  if (variant === "nursery") {
-    return (
-      <svg
-        viewBox="0 0 640 420"
-        role="img"
-        aria-label={ariaLabel}
-        className="h-full w-full object-cover"
-      >
-        <defs>
-          <linearGradient id="nur-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#F1F5F9" />
-            <stop offset="100%" stopColor="#E2E8F0" />
-          </linearGradient>
-        </defs>
-        <rect width="640" height="420" fill="url(#nur-bg)" />
-        <circle cx="510" cy="95" r="140" fill="#1E3A8A" opacity="0.06" />
-        <rect
-          x="64"
-          y="58"
-          width="512"
-          height="304"
-          rx="18"
-          fill="#FFFFFF"
-          stroke="#CBD5E1"
-          strokeWidth="1.5"
-        />
-        <rect
-          x="92"
-          y="88"
-          width="160"
-          height="244"
-          rx="12"
-          fill="#F8FAFC"
-          stroke="#E2E8F0"
-        />
-        <rect x="112" y="112" width="86" height="10" rx="5" fill="#0F172A" />
-        <rect
-          x="112"
-          y="144"
-          width="120"
-          height="28"
-          rx="8"
-          fill="#0F172A"
-          opacity="0.08"
-        />
-        <rect
-          x="112"
-          y="184"
-          width="120"
-          height="28"
-          rx="8"
-          fill="#FFFFFF"
-          stroke="#E2E8F0"
-        />
-        <rect
-          x="112"
-          y="224"
-          width="120"
-          height="28"
-          rx="8"
-          fill="#FFFFFF"
-          stroke="#E2E8F0"
-        />
-        <rect
-          x="112"
-          y="264"
-          width="120"
-          height="28"
-          rx="8"
-          fill="#FFFFFF"
-          stroke="#E2E8F0"
-        />
-        <rect x="276" y="88" width="272" height="112" rx="12" fill="#0F172A" />
-        <rect x="300" y="114" width="136" height="10" rx="5" fill="#FFFFFF" />
-        <rect x="300" y="136" width="196" height="8" rx="4" fill="#94A3B8" />
-        <rect x="300" y="156" width="90" height="18" rx="9" fill="#1E3A8A" />
-        <rect
-          x="276"
-          y="218"
-          width="128"
-          height="114"
-          rx="12"
-          fill="#F8FAFC"
-          stroke="#E2E8F0"
-        />
-        <rect
-          x="420"
-          y="218"
-          width="128"
-          height="114"
-          rx="12"
-          fill="#F8FAFC"
-          stroke="#E2E8F0"
-        />
-        <rect x="296" y="244" width="70" height="8" rx="4" fill="#334155" />
-        <rect x="296" y="266" width="88" height="28" rx="6" fill="#E2E8F0" />
-        <rect x="440" y="244" width="70" height="8" rx="4" fill="#334155" />
-        <rect
-          x="440"
-          y="266"
-          width="88"
-          height="28"
-          rx="6"
-          fill="#1E3A8A"
-          opacity="0.16"
-        />
-      </svg>
-    );
-  }
-
   return (
-    <svg
-      viewBox="0 0 640 420"
-      role="img"
-      aria-label={ariaLabel}
+    <Image
+      src={CASE_STUDY_IMAGES[variant]}
+      alt={ariaLabel}
+      width={960}
+      height={720}
+      loading="lazy"
       className="h-full w-full object-cover"
-    >
-      <defs>
-        <linearGradient id="spo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#F8FAFC" />
-          <stop offset="100%" stopColor="#DBEAFE" stopOpacity="0.45" />
-        </linearGradient>
-      </defs>
-      <rect width="640" height="420" fill="url(#spo-bg)" />
-      <rect
-        x="56"
-        y="56"
-        width="528"
-        height="308"
-        rx="18"
-        fill="#FFFFFF"
-        stroke="#CBD5E1"
-        strokeWidth="1.5"
-      />
-      <rect x="84" y="86" width="472" height="58" rx="12" fill="#0F172A" />
-      <rect x="108" y="109" width="144" height="12" rx="6" fill="#FFFFFF" />
-      <rect
-        x="456"
-        y="104"
-        width="76"
-        height="22"
-        rx="11"
-        fill="#3B82F6"
-        opacity="0.25"
-      />
-      <rect
-        x="84"
-        y="164"
-        width="146"
-        height="168"
-        rx="12"
-        fill="#F8FAFC"
-        stroke="#E2E8F0"
-      />
-      <rect
-        x="247"
-        y="164"
-        width="146"
-        height="168"
-        rx="12"
-        fill="#F8FAFC"
-        stroke="#E2E8F0"
-      />
-      <rect
-        x="410"
-        y="164"
-        width="146"
-        height="168"
-        rx="12"
-        fill="#F8FAFC"
-        stroke="#E2E8F0"
-      />
-      <circle cx="120" cy="204" r="16" fill="#0F172A" opacity="0.08" />
-      <rect x="104" y="238" width="96" height="10" rx="5" fill="#0F172A" />
-      <rect x="104" y="258" width="104" height="8" rx="4" fill="#94A3B8" />
-      <rect x="104" y="286" width="72" height="20" rx="6" fill="#0F172A" />
-      <circle cx="283" cy="204" r="16" fill="#1E3A8A" opacity="0.14" />
-      <rect x="267" y="238" width="96" height="10" rx="5" fill="#0F172A" />
-      <rect x="267" y="258" width="104" height="8" rx="4" fill="#94A3B8" />
-      <rect x="267" y="286" width="72" height="20" rx="6" fill="#1E3A8A" />
-      <circle cx="446" cy="204" r="16" fill="#0F172A" opacity="0.08" />
-      <rect x="430" y="238" width="96" height="10" rx="5" fill="#0F172A" />
-      <rect x="430" y="258" width="104" height="8" rx="4" fill="#94A3B8" />
-      <rect x="430" y="286" width="72" height="20" rx="6" fill="#0F172A" />
-    </svg>
+    />
   );
 }
 
